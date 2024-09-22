@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            color:aliceblue;
+            background-color: black;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            width: 300px;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: white;
+            transition: opacity 0.3s ease;
+        }
+
+        .yellow { background-color: #f1c40f; }
+        .purple { background-color: #8e44ad; }
+        .red { background-color: #e74c3c; }
+        .green { background-color: #2ecc71; }
+
+        .card:hover {
+            opacity: 1;
+        }
+
+        .card:hover ~ .card:not(:hover),
+        .card:not(:hover) ~ .card:hover {
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <h1>CARDS</h1>
+    <div class="card-container">
+        <div class="card yellow"></div>
+        <div class="card purple"></div>
+        <div class="card red"></div>
+        <div class="card green"></div>
+    </div>
+</body>
+</html>
