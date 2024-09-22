@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        background-color: #000000;
+
+    } 
+    .pricing-header {
+        text-align: left;
+        margin-bottom: 40px;
+        padding: 20px;
+    }
+
+    .pricing-header h1 {
+        font-size: 32px;
+        color: #fcfcfc;
+        margin: 0;
+    }
+    .pricing-header h3 {
+        font-size: 22px;
+        color: #7C3AED;
+        margin-bottom:  30px;
+    }
+
+
+    .pricing-header p {
+        color: #bbb;
+        font-size: 18px;
+    }
+    .pricing-container {
+            display: flex;
+            
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin: 40px 40px 40px 40px;
+        }
+
+        .pricing-card {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: left;
+            transition: transform 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: scale(1.05);
+        }
+
+        .pricing-card h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #7C3AED;
+        }
+
+        .price {
+            font-size: 36px;
+            color: #fff;
+            margin-top: auto;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .features li {
+            margin-bottom: 10px;
+            color: #bbb;
+        }
+
+        .features li:before {
+            content: '✔';
+            color: #7C3AED;
+            margin-right: 10px;
+        }
+
+        .pricing-card button {
+            background-color: #7C3AED;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .basic-plan {
+            background-color: #333;
+        }
+
+        .basic-plan .price {
+            font-size: 24px;
+        }
+
+        .basic-plan .features li:before {
+            content: '';
+        }
+    </style>
+</head>
+<body>
+    <div class="pricing-header">
+        <h3>PRICING</h3>
+        <h1>One Price for Everything</h1>
+        <p>The simplest pricing in the industry. You won't need a calculator for this.</p>
+    </div>
+    <div class="pricing-container">
+     
+        <div class="pricing-card">
+            <h2>Pro</h2>
+            <div class="price">$20 <span>/ Site / Month (billed annually)</span></div>
+            <ul class="features">
+                <li>Custom Domains</li>
+                <li>GDPR Solution</li>
+                <li>Beautiful Site Design</li>
+                <li>Super-Fast Hosting</li>
+                <li>Analytics</li>
+                <li>Custom Forms</li>
+                <li>Blogging</li>
+                <li>Password Protection</li>
+                <li>Multilingual Sites</li>
+                <li>User Management</li>
+                <li>Unlimited Pages</li>
+                <li>Unlimited Team Members</li>
+            </ul>
+            <button>Get Started</button>
+        </div>
+
+        
+        <div class="pricing-card basic-plan">
+            <h2>Basic</h2>
+            <div class="price">Free</div>
+            <ul class="features">
+                <li>Publish your site for free with almost all pro features.</li>
+                <li>Everything from Pro, except:</li>
+                <li>- No Custom Domains</li>
+                <li>- "Made with Umso" Branding</li>
+                <li>- No credit card required</li>
+            </ul>
+            <button>Get Started</button>
+        </div>
+    </div>
+
+</body>
+</html>
