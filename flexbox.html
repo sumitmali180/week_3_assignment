@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+        }
+        .one {
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            height: 90px;
+            margin: 0 auto;
+            align-items: center; 
+            justify-content: center;
+            gap: 40px; 
+        }
+        .one img {
+            width: 150px;
+            margin-right: 40px; 
+        }
+        .one div {
+            display: flex;
+            gap: 20px; 
+            align-items: center; 
+        }
+        a {
+            text-decoration: none; 
+            color: black; 
+        }
+        button {
+            margin-left: 10px; 
+        }
+        #refer {
+            background-color: rgb(174, 174, 233);
+            border: none;
+            border-radius: 5px;
+            height: 40px;
+        }
+        #login {
+            background-color: transparent;
+            border-color: rgb(206, 51, 51);
+            width: 80px;
+            height: 40px;
+            color: rgb(206, 51, 51);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <div>
+            <img src="https://cdn.masaischool.com/masai-website/Masai_Logo_dark_web_b21aab8c62.webp" alt="">
+        </div>
+        <div>
+            <a href="">COURSES</a>
+            <a href="">FEES & ISA</a>
+            <a href="">ABOUT US</a>
+            <a href="">FROM US</a>
+            <a href="">FAQ</a>
+            <a href="">EVENTS</a>
+            <div style="display: flex; align-items: center; gap: 10px;"> 
+                <button id="refer">REFER & EARN</button>
+                <button id="login">LOGIN</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
