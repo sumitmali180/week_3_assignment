@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+        }
+        .one {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            background-color: rgb(224, 130, 130);
+            height: 60px;
+            width: 100vw;
+            margin: auto; 
+        }
+        .one button {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-left: 20px;
+            font-size: medium;
+        }
+        .two {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            width: 100vw;
+            padding: 0 20px;
+        }
+        .two img {
+            height: 20px; 
+            margin-left: 20px;
+        }
+        .two nav {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        .two nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: rgb(8, 8, 8);
+        }
+        .two button {
+            background-color: transparent;
+            color: red;
+            border-color: red;
+            height: 30px;
+            border-radius: 10px;
+            margin-left: 10px;
+        }
+        .two div:last-child {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .two button:hover, .three button:hover {
+            background-color: darkred;
+            color: white;
+        }
+        .three {
+            display: flex;
+            flex-direction: row;
+            padding: 20px 20px 20px 60px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .three p {
+            font-size: 30px;
+            color: blueviolet;
+            font-weight: 800;
+        }
+        .three h4 {
+            font-size: large;
+        }
+        .three button {
+            background-color: red;
+            color: aliceblue;
+            border-radius: 3px;
+            width: 100px;
+            height: 40px;
+            border: none;
+        }
+        .three video {
+            margin-left: auto;
+            padding-right: 60px;
+            border-radius: 20px;
+        }
+        .four {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: blue;
+            color: aliceblue;
+            margin: auto;
+        }
+        .four h1 {
+            margin-bottom: 10px;
+        }
+        .four div {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">Applications for our 6th November Batches are now open!
+        <button>APPLY NOW</button>
+    </div>
+
+    <div class="two">
+        <div>
+            <img src="data:image/png;base64,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" alt="at">
+        </div>
+
+        <div>
+            <nav><div>
+                <a href="">COURSES</a>
+                <a href="">FEES</a>
+                <a href="">EVENTS</a>
+                <a href="">LEARN</a>
+                <a href="">SUCCESS STORIES</a>
+                <a href="">HIRE FROM US</a>
+            </div>
+            <div>
+                <button>REFER & EARN</button>
+                <button>SIGN UP</button>
+            </div>
+            </nav>
+        </div>
+
+        
+        
+    </div>
+    <div class="three">
+        <div>
+            <div>
+                <p>Proof that dreams do<br>
+                    come true
+                </p>
+            </div>
+            <div>
+                <h4>A testament to what's possible</h4>
+            </div>
+            <div>
+                <button>APPLY NOW</button>
+            </div>
+        </div>
+        <div>
+            <iframe width="560" height="315" src="https://cdn.masaischool.com/masai-website/cab_driver_became_software_engineer_meet_ashish_raj_from_munger_bihar_1_1080p_808ebc1236.mp4" 
+                    title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+        
+    </div>
+
+    <div class="four">
+        <div>
+            <h1>How is Masai Creating an Impact?</h1>
+        </div>
+
+        <div>
+            4000 students placed across 1000+ companies
+        </div>
+    </div>
+    
+
+    
+
+    
+
+
+
+</body>
+</html>
