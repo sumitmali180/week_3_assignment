@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Maggi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      width: 100px;
+      background-color: #f3f3f3;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .navbar img {
+      width: 50px;
+      margin-bottom: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: black;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .content {
+      margin-left: 70px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .content-left, .content-right {
+      width: 48%;
+    }
+
+    .content-left {
+      border-right: 1px solid #eaeaea;
+      padding-right: 40px;
+    }
+
+    .content-left h1 {
+      font-size: 58px;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+
+    .content-left form {
+      margin-top: 40px;
+    }
+
+    .content-left form label {
+      display: block;
+      margin-left: 40px;
+      margin-bottom: 5px;
+    }
+
+    .content-left form input {
+      display: block;
+      width: 60%;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 0 auto 20px auto;
+      border-radius: 5px;
+    }
+
+    .content-left button {
+      display: flex;
+      background-color: rgb(25, 22, 224);
+      color: white;
+      margin: 20px 20px;
+    }
+
+    .content-left form button {
+      width: 64%;
+      padding: 10px;
+      background-color: #ccc;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+
+    #fb {
+      background-color: rgb(25, 22, 224);
+    }
+
+    #google {
+      background-color: rgb(247, 247, 247);
+      color: black;
+    }
+
+    .content-right {
+      padding-left: 40px;
+    }
+
+    .content-right h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .content-right ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .content-right ul li {
+      margin-bottom: 20px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .content-right ul li:before {
+      content: '✔️';
+      margin-right: 10px;
+      color: green;
+    }
+
+    .content-right button {
+      background-color: rgb(44, 46, 46);
+      color: #f3f3f3;
+      width: 400px;
+      height: 60px;
+      font-size: 20px;
+      border: none;
+      position: relative;
+      overflow: hidden;
+      transition: color 0.3s, background-color 0.3s;
+    }
+
+    .content-right button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: yellow;
+      transition: left 0.3s;
+      z-index: 0;
+    }
+
+    .content-right button:hover::before {
+      left: 0;
+    }
+
+    .content-right button:hover {
+      color: rgb(0, 0, 0);
+    }
+
+    .content-right button span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer {
+      background-color: #5c4033;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 100px;
+      bottom: 0;
+      width: 100%;
+      height: max-content;
+    }
+
+    .footer .socials {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer .social-icons {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .footer .social-icons img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .footer .language-table {
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .footer .links {
+      margin-right: 200px;
+      padding: 20px;
+    }
+
+    .footer .links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px; /* Adjusted spacing between links */
+    }
+
+    .footer .links a:not(:last-child) {
+      margin-bottom: 10px; /* Space between links */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <img src="https://www.maggi.in/sites/default/files/maggi_logo_png_0.png" alt="Maggi Logo">
+    <a href="#">Recipes</a>
+    <a href="#">Maggi</a>
+    <a href="#">MyMenu Plan</a>
+    <a href="#">Search</a>
+    <a href="#">Login</a>
+  </div>
+
+  <div class="content">
+    <div class="content-left">
+      <h1>My Maggi<br>Welcome back!</h1>
+      <button id="fb"><img src="" alt="img">| Sign in with Facebook</button>
+      <button id="google"><img src="" alt="img">| Sign in with Google</button>
+      <form>
+        <label>E-mail</label>
+        <input type="email" placeholder="Enter your e-mail address here *">
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password here *">
+        <button>Login via e-mail</button>
+      </form>
+      <a href="#">Forgot your password?</a>
+    </div>
+
+    <div class="content-right">
+      <h1>Not registered yet?</h1>
+      <button>
+        <span>
+          <span class="arrow">></span> Register
+        </span>
+      </button>
+      <ul>
+        <li>Your personal newsletter with exciting recipes and ideas</li>
+        <li>Personalize your newsletter to your preferences</li>
+        <li>Get to know about Maggi products</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">   
+    <div class="socials">
+      <div class="social-icons">
+        <img src="facebook.png" alt="Facebook">
+        <img src="youtube.png" alt="YouTube">
+        <img src="instagram.png" alt="Instagram">
+        <img src="twitter.png" alt="Twitter">
+      </div>
+      <table border="1" class="language-table">
+        <tr>
+          <td>EN</td>
+          <td>HI</td>
+          <td>MR</td>
+          <td>TE</td>
+          <td>KN</td>
+        </tr>
+      </table>
+    </div>
+    <div class="links">
+      <a href="#">Contact Us</a>
+      <a href="#">Terms and Conditions</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Copyright</a>
+    </div>
+  </div>
+</body>
+</html>
