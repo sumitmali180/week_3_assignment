@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: linear-gradient(to right, blue, black);
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .logo img {
+            height: 50px;
+        }
+        
+        .spacer {
+            flex-grow: 1;
+        }
+        
+        .menu ul {
+            list-style-type: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .menu a {
+            text-decoration: none;
+            color: #f0f0f0;
+        }
+        
+        .menu a:hover {
+            color: #007BFF;
+        }
+        
+        .signup {
+            font-weight: bold;
+            color: white;
+            background-color: lightblue;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .signup:hover {
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://cdn.prod.website-files.com/62e8d2ea218fb7676b6892a6/63a9a311ecd826aa5be44d4e_NS%20Logo%20primary%20white-p-500.png" alt="Newton School Logo">
+        </div>
+        <div class="spacer"></div>
+        <div class="menu">
+            <ul>
+                <li><a href="#data-science">Data Science & AI</a></li>
+                <li><a href="#btech">BTech CS&A1</a></li>
+                <li><a href="#newton-edge">Newton Edge</a></li>
+                <li><a href="#refer-earn">Refer & Earn</a></li>
+                <li><a href="#more">More</a></li>
+                <li><a href="#signup" class="signup">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
