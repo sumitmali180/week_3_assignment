@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Layout</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .outer {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            width: 80%;
+            max-width: 300px;
+        }
+        .inner {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .inner img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .description {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .link {
+            font-size: 14px;
+            color: blue;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1000px) {
+            .outer {
+                grid-template-columns: 1fr;
+            }
+            .inner {
+                grid-template-columns: 1fr;
+            }
+            .title, .description, .link {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <img src="https://cdn.masaischool.com/masai-website/Masai_Logo_dark_web_b21aab8c62.webp" alt="Image 1">
+            <div>
+                <div class="title">Front End Developer</div>
+                <div class="description">"Empower creativity through our front-end development program, where students master HTML, CSS, and JavaScript to build dynamic, user-friendly interfaces. Learn the latest frameworks and design principles to create visually stunning web applications."</div>
+                <div class="link">Read more</div>
+            </div>
+        </div>
+        <div class="inner">
+            <img src="https://cdn.masaischool.com/masai-website/Masai_Logo_dark_web_b21aab8c62.webp" alt="Image 1">
+            <div>
+                <div class="title">Back End Developer</div>
+                <div class="description">"Unlock the power of server-side programming with our back-end development course, focusing on databases, APIs, and server architecture. Equip yourself with skills in languages like Node.js, Python, and Ruby to create robust and scalable applications."</div>
+                <div class="link">Read more</div>
+            </div>
+        </div>
+        <div class="inner">
+            <img src="https://cdn.masaischool.com/masai-website/Masai_Logo_dark_web_b21aab8c62.webp" alt="Image 1">
+            <div>
+                <div class="title">Full Stack</div>
+                <div class="description">"Become a versatile developer with our full-stack program, blending front-end flair and back-end functionality. Gain comprehensive knowledge in both areas to design and deploy complete web solutions that meet real-world needs."</div>
+                <div class="link">Read more</div>
+            </div>
+        </div>
+        <div class="inner">
+            <img src="https://cdn.masaischool.com/masai-website/Masai_Logo_dark_web_b21aab8c62.webp" alt="Image 1">
+            <div>
+                <div class="title">Software Testing</div>
+                <div class="description">"Ensure software quality through our software testing curriculum, teaching students the art of identifying bugs and improving functionality. Master manual and automated testing techniques to enhance user experience and deliver reliable applications."</div>
+                <div class="link">Read more</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
