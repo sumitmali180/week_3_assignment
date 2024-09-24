@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colored Grid</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 100px);
+            gap: 10px;
+            
+        }
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            font-size: 24px;
+            border:5px solid black
+        }
+        .item1 {
+            background-color: #ff5733;
+            grid-column: span 2;
+        }
+        .item2 {
+            background-color: pink;
+            grid-row: span 2;
+        }
+        .item3 {
+            background-color: #3357ff;
+        }
+        .item4 {
+            background-color: brown;
+        }
+        .outer{
+            width:50%;
+            padding: 10px 10px 10px 10px;
+            height: auto;
+            background-color: purple;
+            border:5px solid black
+            
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="grid">
+        <div class="grid-item item1">4</div>
+        <div class="grid-item item2">6</div>
+        <div class="grid-item item3">1</div>
+        <div class="grid-item item4">5</div>
+    </div>
+</div>
+</body>
+</html>
