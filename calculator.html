@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: #d61515;
+        }
+        header {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            margin: 20px 0;
+        }
+        .calculator {
+            display: grid;
+            width: 300px;
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; 
+            padding: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto repeat(4, 60px);
+            gap:5px;
+        }
+        .calculator input {
+            grid-column: span 4;
+            height: 60px;
+            font-size: 24px;
+            text-align: right;
+            padding: 10px;
+            border: 2px solid #05080c;
+            border-radius: 5px;
+            outline: none;
+        }
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #007bff;
+            transition: background-color 0.3s;
+            
+        }
+        .grid-item:hover {
+            background-color: #0056b3;
+        }
+        button {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 24px;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Masai Calculator</h1>
+    </header>
+    <main>
+        <div class="calculator">
+            <input type="text" id="display" disabled>
+
+            <div class="grid-item"><button onclick="addToDisplay('1')">1</button></div>
+            <div class="grid-item"><button onclick="addToDisplay('2')">2</button></div>
+            <div class="grid-item"><button onclick="addToDisplay('3')">3</button></div>
+            <div class="grid-item"><button onclick="addToDisplay('+')">+</button></div>
+            <div class="grid-item"><button onclick="addToDisplay('4')">4</button></div>
+            <div class="grid-item"><button onclick="addToDisplay('5')">5</button></div>
+            <div class="grid-item"><button onclick="addToDisplay('6')">6</button></div>
+            <div class="grid-item"><button onclick="addToDisplay('-')">-</button></div>
+            <div class="grid-item"><button onclick="addToDisplay('7')">7</button></div>
+            <div class="grid-item"><button onclick="addToDisplay('8')">8</button></div>
+            <div class="grid-item"><button onclick="addToDisplay('9')">9</button></div>
+            <div class="grid-item"><button onclick="addToDisplay('*')">*</button></div>
+            <div class="grid-item"><button onclick="clearDisplay()">C</button></div>
+            <div class="grid-item"><button onclick="addToDisplay('0')">0</button></div>
+            <div class="grid-item"><button onclick="calculateResult()">=</button></div>
+            <div class="grid-item"><button onclick="addToDisplay('/')">/</button></div>
+        </div>
+    </main>
+
+    
+</body>
+</html>
