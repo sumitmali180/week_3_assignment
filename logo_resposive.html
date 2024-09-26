@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .one {
+            display: grid;
+            grid-template-areas:
+            "a b"
+            "c c";
+            grid-template-rows: 7cm 7cm;
+        }
+        .a {
+            display: flex;
+            background-color: rgb(2, 2, 104);
+            justify-content: center;
+            align-items: center;
+        }
+        .b {
+            grid-area: b;
+            display: flex;
+            background-color: lightseagreen;
+            justify-content: space-evenly;
+            line-height: 25px;
+            color: aliceblue;
+            background-color: blue;
+        }
+        .c {
+            grid-area: c;
+            background-color: black;
+            height: max-content;
+            color: aliceblue;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .a img {
+            height: 40%;
+            width: 60%;
+        }
+        .b a {
+            color: aliceblue;
+        }
+        .c .info, .c .footer {
+            margin: 0 10px;
+        }
+        .footer {
+            display: flex;
+            align-items: center;
+        }
+        .footer p {
+            margin-right: 20px;
+        }
+        .footer ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer ul li {
+            margin-left: 20px;
+        }
+        .c a {
+            color: antiquewhite;
+        }
+        @media only screen and (max-width: 600px) {
+            .one {
+                display: grid;
+                grid-template-areas:
+                "c"
+                "b"
+                "a";
+                grid-template-rows: auto;
+            }
+            .c {
+                height: auto; 
+            }
+        }
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
+            .one {
+                display: grid;
+                grid-template-areas:
+                "b"
+                "a"
+                "c";
+                grid-template-rows: 7cm 7cm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <div class="a"><img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2024-09-24/Screenshot%202024-09-24%20153613_303016.png" alt=""></div>
+        <div class="b">
+            <div>
+                <ul type="none">
+                    <li><h4>Shop</h4></li>
+                    <li>Gift Cards</li>
+                    <li>Etsy Registry</li>
+                    <li>Sitemap</li>
+                    <li>Etsy Blog</li>
+                    <li>Etsy United Kingdom</li>
+                    <li>Etsy Germany</li>
+                    <li>Etsy Canada</li>
+                </ul>
+            </div>
+            <div>
+                <ul type="none">
+                    <li><h4>Sell</h4></li>
+                    <li>Teams</li>
+                    <li>Forums</li>
+                    <li>Sell on Etsy</li>
+                    <li>Affiliates & Creators</li>
+                </ul>
+            </div>
+            <div>
+                <ul type="none">
+                    <li><h4>About</h4></li>
+                    <li>Etsy, Inc.</li>
+                    <li>Policies</li>
+                    <li>Investors</li>
+                    <li>Careers</li>
+                    <li>Press</li>
+                    <li>Impact</li>
+                    <li>Legal imprint</li>
+                </ul>
+            </div>
+            <div>
+                <ul type="none">
+                    <li><h4>Shop</h4></li>
+                    <li>Gift cards</li>
+                    <li>Etsy Registry</li>
+                    <li>Sitemap</li>
+                    <li>Etsy blog</li>
+                    <li>Etsy United Kingdom</li>
+                    <li>Etsy Germany</li>
+                    <li>Etsy Canada</li>
+                </ul>
+            </div>
+        </div>
+        <div class="c">
+            <div class="info">
+                <p><img src="https://t3.ftcdn.net/jpg/05/33/37/90/360_F_533379078_I7wWSv66fi8A0aimgR7zj0uOzRuHL7GY.png" alt="india" width="40px" height="30px"> India | English(IN) | 2(INR)</p>
+            </div>
+            <div class="footer">
+                <p>C 2024 Etsy, Inc.</p>
+                <ul class="links">
+                    <li><a href="">Term of Use</a></li>
+                    <li><a href="">Privacy</a></li>
+                    <li><a href="">Interest based ads</a></li>
+                    <li><a href="">Local Shop</a></li>
+                    <li><a href="">Regions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
