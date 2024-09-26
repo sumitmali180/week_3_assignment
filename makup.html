@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup Offers Grid</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+    }
+    .heads {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 30px;
+        }
+        .line {
+            background-color: pink;
+            height: 2px;
+            width: 60px;
+        }
+        .offer-text {
+            margin: 0 10px;
+            font-size: 24px;
+        }
+    .offers-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .offer-card {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: relative;text-align: right;
+    }
+    .offer-image {
+        width: calc(100% - 40px); 
+        height: 200px;
+        object-fit: cover;
+        margin: 20px; 
+        border-radius: 8px;
+    }
+    .offer-code {
+        background-color: #ff69b4;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        border: 2px dotted #fff;
+        margin: 20px; 
+        display: inline-block; 
+        
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+    }
+        @media only screen and (max-width: 600px) {
+            
+            .offers-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
+            
+            .offers-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media only screen and (min-width: 1025px) {
+            
+            .offers-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+</style>
+
+</head>
+<body>
+    <div class="heads">
+        <div class="line"></div>
+        <h1 class="offer-text">OFFERS</h1>
+        <div class="line"></div>
+    </div>
+    <div class="offers-container">
+        <div class="offer-card">
+            <img src="https://media6.ppl-media.com/mediafiles/blogs/shutterstock_1805797540_a5cdc3576e.jpg" alt="Women's Day Exclusive" class="offer-image">
+            <span class="offer-code">DEAL300</span>
+        </div>
+        <div class="offer-card">
+            <img src="https://media6.ppl-media.com/mediafiles/blogs/shutterstock_1805797540_a5cdc3576e.jpg" alt="Free Pouch" class="offer-image">
+            <span class="offer-code">DEALS599</span>
+        </div>
+        <div class="offer-card">
+            <img src="https://media6.ppl-media.com/mediafiles/blogs/shutterstock_1805797540_a5cdc3576e.jpg" alt="Free Pouch" class="offer-image">
+            <span class="offer-code">DEALS599</span>
+        </div>
+        <div class="offer-card">
+            <img src="https://media6.ppl-media.com/mediafiles/blogs/shutterstock_1805797540_a5cdc3576e.jpg" alt="Women's Day Exclusive" class="offer-image">
+            <span class="offer-code">DEAL300</span>
+        </div>
+        <div class="offer-card">
+            <img src="https://media6.ppl-media.com/mediafiles/blogs/shutterstock_1805797540_a5cdc3576e.jpg" alt="Free Pouch" class="offer-image">
+            <span class="offer-code">DEALS599</span>
+        </div>
+        <div class="offer-card">
+            <img src="https://media6.ppl-media.com/mediafiles/blogs/shutterstock_1805797540_a5cdc3576e.jpg" alt="Free Pouch" class="offer-image">
+            <span class="offer-code">DEALS599</span>
+        </div>
+    </div>
+</body>
+</html>
